@@ -221,4 +221,48 @@
 
 }
 
+#branches {
+  padding-block: 0 40px;
+  .container {
+    display: flex;
+    gap: 21px;
+    align-items: center;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      h2 {
+        color: #4B4B4B;
+        font-family: "Inter", sans-serif;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: 4px;
+        margin-bottom: 30px;
+      }
+      .buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 48px;
+        row-gap: 24px;
+        margin-bottom: 30px;
+
+        .btn {
+          padding: 4px 8px;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          color: #4B4B4B;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 156%;
+          letter-spacing: 1.8px;
+        }
+      }
+    }
+
+  }
+}
+
 }
