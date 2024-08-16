@@ -23,9 +23,14 @@
   }
 
   .contacts {
-    li:not(:last-child) {
-      margin-bottom: 20px;
+    li {
+      display: flex;
+      gap: 12px;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
     }
+
   }
 
   .socials {

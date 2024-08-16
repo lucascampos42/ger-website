@@ -33,9 +33,9 @@ nav {
   height: fit-content;
   background-color: #166A48;
   border-radius: 34px;
-  padding-inline: 34px;
+  padding-inline: 34px !important;
   margin-top: 20px;
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
 img {

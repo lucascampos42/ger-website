@@ -20,7 +20,7 @@ body {
 }
 
 body {
-  font-family: "Inter", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
   overflow: overlay;
 }
 
@@ -42,100 +42,72 @@ a {
 }
 
 .btn {
-  padding: 6px 16px;
-  border-radius: 4px;
+  padding: 8px 50px;
+  border-radius: 32px;
   line-height: 22px;
-  color: var(--gray-400);
+  color: #121313;
   font-weight: 500;
 }
 
-.btn-blue {
-  color: white;
-  background-color: #001941;
-  transition: background 0.3s ease-in-out;
-}
-
-.btn-blue:hover {
-  color: white !important;
-  background-color: #010e24 !important;
-  border-color: transparent !important;
-}
-
-.btn-blue:disabled {
-  color: white !important;
-  pointer-events: unset;
-  cursor: not-allowed;
-  background-color: #010e24 !important;
-  border-color: transparent !important;
-  opacity: 1 !important;
-}
-
 .btn-transp {
-  color: #031749;
+  color: #121313;
   background-color: transparent;
-  border: 0.5px solid #0E1F42;
+  border: 2px solid #166A48;
   transition: all 0.3s ease-in-out;
 }
 
 .btn-transp:hover {
-  color: #031749 !important;
+  color: #121313 !important;
   background-color: white !important;
-  border-color: #031749 !important;
+  border-color: #166A48 !important;
 }
 
 .btn-transp:disabled {
-  color: #031749 !important;
+  color: #121313 !important;
   pointer-events: unset;
   cursor: not-allowed;
   background-color: white !important;
-  border-color: #031749 !important;
+  border-color: #166A48 !important;
   opacity: 1 !important;
 }
 
-.btn-orange {
+.btn-green {
   color: white;
-  background-color: #D35D3D;
-  transition: background 0.3s ease-in-out;
+  background-color: #166A48;
+  border: 2px solid #166A48;
+  transition: all 0.3s ease-in-out;
 }
 
-.btn-orange:hover {
+.btn-green:hover {
   color: white !important;
-  background-color: #e04d25 !important;
-  border-color: transparent !important;
+  background-color: #166A48 !important;
+  border-color: #166A48 !important;
 }
 
-.btn-orange:disabled {
+.btn-green:disabled {
   color: white !important;
   pointer-events: unset;
   cursor: not-allowed;
-  background-color: #e04d25 !important;
-  border-color: transparent !important;
+  background-color: #166A48 !important;
+  border-color: #166A48 !important;
   opacity: 1 !important;
 }
 
-.btn-gray {
-  color: #031749;
-  background-color: #E9E9E9;
-  transition: background 0.3s ease-in-out;
+.container {
+  padding-inline: 0 !important;
 }
-
-.btn-gray:hover {
-  color: #031749 !important;
-  background-color: #c0bebe !important;
-  border-color: transparent !important;
+.right-container, .left-container {
+  width: 100%;
 }
-
-.btn-gray:disabled {
-  color: #031749 !important;
-  pointer-events: unset;
-  cursor: not-allowed;
-  background-color: #c0bebe !important;
-  border-color: transparent !important;
-  opacity: 1 !important;
+.right-container {
+  margin-right: 0 !important;
+}
+.left-container {
+  margin-left: 0 !important;
 }
 
 @media (min-width: 576px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container, .right-container, .left-container {
     max-width: 544px;
     padding-right: 0;
     padding-left: 0;
@@ -146,28 +118,43 @@ a {
   .container {
     max-width: 704px;
   }
+  .right-container, .left-container {
+    width: 352px;
+  }
 }
 
 @media (min-width: 992px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container {
     max-width: 866px;
+  }
+  .right-container, .left-container {
+    width: 433px;
   }
 }
 
 @media (min-width: 1200px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container {
     max-width: 948px;
+  }
+  .right-container, .left-container {
+    width: 474px;
   }
 }
 
 @media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container {
     max-width: 1188px;
+  }
+  .right-container, .left-container {
+    width: 594px;
   }
 }
 
 @media (min-width: 1600px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+  .container {
     max-width: 1348px;
+  }
+  .right-container, .left-container {
+    width: 674px;
   }
 }
