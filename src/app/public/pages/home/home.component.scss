@@ -93,4 +93,51 @@
   }
 }
 
+#what-we-do {
+  background-color: #96BF19;
+  padding-block: 76px;
+
+  img {
+    width: 120%;
+    height: auto;
+  }
+
+  .container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+
+    .texts {
+      h2 {
+        color: #FFF;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 4px;
+        margin-bottom: 12px;
+      }
+
+      p {
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 156%;
+        letter-spacing: 1.6px;
+        margin-bottom: 34px;
+      }
+
+      .btn {
+        border-color: white;
+        color: white;
+
+        &:hover {
+          color: white !important;
+          background-color: transparent !important;
+          border-color: white !important;
+        }
+      }
+    }
+  }
+}
+
 }
