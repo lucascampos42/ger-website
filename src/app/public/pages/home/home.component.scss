@@ -265,4 +265,44 @@
   }
 }
 
+#our-story {
+  padding-block: 112px;
+  background: #166A48;
+
+  .container {
+    display: flex;
+    padding-inline: 200px !important;
+    .texts {
+      padding: 74px 54px;
+      border: 2px solid #FEFFFF;
+      h2 {
+        color: #FFF;
+        font-family: "Inter", sans-serif;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 156%;
+        margin-bottom: 16px;
+      }
+      p {
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 156%;
+        letter-spacing: 1.6px;
+        margin-bottom: 16px;
+      }
+      .btn {
+        color: #FFF;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 156%;
+        letter-spacing: 1.8px;
+        border: 2px solid #FFF;
+        padding: 8px 20px;
+      }
+    }
+  }
+}
+
 }
