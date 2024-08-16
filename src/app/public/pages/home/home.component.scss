@@ -3,5 +3,94 @@
 }
 
 #hero {
-  height: 100vh;
+  position: relative;
+  height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+  .home-img {
+    right: 0;
+    position: absolute;
+    top: 0;
+    height: calc(100% - 106px);
+  }
+  .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .texts {
+      width: 50%;
+
+      & > span {
+        color: #5C5C5C;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+      }
+
+      h1 {
+        color: #121313;
+        font-family: "Inter", sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        margin-block: 16px;
+
+        span {
+          color: #166A48;
+        }
+      }
+
+      p {
+        color: #626363;
+        font-family: "Inter", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 35px;
+      }
+
+      .btn {
+        color: #121313;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 156%;
+        letter-spacing: 1.8px;
+      }
+    }
+  }
+  .validations {
+    display: flex;
+    height: 106px;
+    background: #166A48;
+    justify-content: space-between;
+
+    div {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      justify-content: center;
+
+      &:first-child {
+        border-right: 1px solid white;
+      }
+
+      h4 {
+        color: #FFF;
+        font-size: 64px;
+        font-weight: 500;
+        line-height: 156%;
+        letter-spacing: 6.4px;
+        margin: 0;
+      }
+      span {
+        color: #FFF;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 156%;
+        letter-spacing: 1.418px;
+      }
+    }
+  }
+}
+
 }
