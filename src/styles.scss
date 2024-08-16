@@ -1,1 +1,173 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/scss/bootstrap';
+@import 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif !important;
+  overflow: overlay;
+}
+
+section {
+  overflow-x: hidden;
+}
+
+ul {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  padding: 6px 16px;
+  border-radius: 4px;
+  line-height: 22px;
+  color: var(--gray-400);
+  font-weight: 500;
+}
+
+.btn-blue {
+  color: white;
+  background-color: #001941;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-blue:hover {
+  color: white !important;
+  background-color: #010e24 !important;
+  border-color: transparent !important;
+}
+
+.btn-blue:disabled {
+  color: white !important;
+  pointer-events: unset;
+  cursor: not-allowed;
+  background-color: #010e24 !important;
+  border-color: transparent !important;
+  opacity: 1 !important;
+}
+
+.btn-transp {
+  color: #031749;
+  background-color: transparent;
+  border: 0.5px solid #0E1F42;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-transp:hover {
+  color: #031749 !important;
+  background-color: white !important;
+  border-color: #031749 !important;
+}
+
+.btn-transp:disabled {
+  color: #031749 !important;
+  pointer-events: unset;
+  cursor: not-allowed;
+  background-color: white !important;
+  border-color: #031749 !important;
+  opacity: 1 !important;
+}
+
+.btn-orange {
+  color: white;
+  background-color: #D35D3D;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-orange:hover {
+  color: white !important;
+  background-color: #e04d25 !important;
+  border-color: transparent !important;
+}
+
+.btn-orange:disabled {
+  color: white !important;
+  pointer-events: unset;
+  cursor: not-allowed;
+  background-color: #e04d25 !important;
+  border-color: transparent !important;
+  opacity: 1 !important;
+}
+
+.btn-gray {
+  color: #031749;
+  background-color: #E9E9E9;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-gray:hover {
+  color: #031749 !important;
+  background-color: #c0bebe !important;
+  border-color: transparent !important;
+}
+
+.btn-gray:disabled {
+  color: #031749 !important;
+  pointer-events: unset;
+  cursor: not-allowed;
+  background-color: #c0bebe !important;
+  border-color: transparent !important;
+  opacity: 1 !important;
+}
+
+@media (min-width: 576px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 544px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 704px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 866px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 948px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1188px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1348px;
+  }
+}

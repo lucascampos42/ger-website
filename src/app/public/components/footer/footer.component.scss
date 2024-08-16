@@ -1,0 +1,35 @@
+:host {
+  display: flex;
+  background: linear-gradient(302deg, #166A48 0.81%, #148F5D 99.28%);
+  flex-direction: column;
+  align-items: center;
+  padding-top: 45px;
+}
+
+.lists {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 60px;
+
+  li {
+    color: #BAEBD7;
+  }
+
+  .nav-list {
+    li:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .contacts {
+    li:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .socials {
+    display: flex;
+    gap: 20px;
+  }
+}

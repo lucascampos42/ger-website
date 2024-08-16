@@ -1,0 +1,47 @@
+<nav class="d-flex container justify-content-between align-items-center position-relative">
+  <img src="assets/logo.png" alt="logo" class="img-fluid" />
+  <ul class="d-flex nav-list">
+    <li><a>Início</a></li>
+    <li><a>Sobre nós</a></li>
+    <li><a>Serviços</a></li>
+    <li><a>Filias</a></li>
+    <li><a>Nossa História</a></li>
+    <li><a>Blog</a></li>
+  </ul>
+  <div class="mobile-options">
+    <svg (click)="toggleModal()" width="32" height="25" viewBox="0 0 32 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 3H29" stroke="#031749" stroke-width="4.28571" stroke-linecap="round"/>
+      <path d="M3 12.5754H29" stroke="#031749" stroke-width="4.28571" stroke-linecap="round"/>
+      <path d="M3 22.4168H29" stroke="#031749" stroke-width="4.28571" stroke-linecap="round"/>
+    </svg>
+    <div class="nav-list-mobile" [class.open]="modalOpen()">
+      <div class="nav-list-mobile-header">
+        <svg
+          (click)="toggleModal()"
+          width="17"
+          height="17"
+          viewBox="0 0 17 17"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1 15.7431L15.7431 1M15.7431 15.7431L1 1"
+            stroke="#031749"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+      <div class="nav-list-mobile-wrapper">
+        <ul class="d-flex flex-column nav-list-mobile-body">
+          <li><a>Início</a></li>
+          <li><a>Sobre nós</a></li>
+          <li><a>Serviços</a></li>
+          <li><a>Filias</a></li>
+          <li><a>Nossa História</a></li>
+          <li><a>Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
