@@ -4,6 +4,11 @@
   width: 100%;
   top: 0;
   z-index: 100;
+
+  @media (max-width: 575px) {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
 }
 
 ul {
@@ -36,6 +41,10 @@ nav {
   padding-inline: 34px !important;
   margin-top: 20px;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+
+  @media (max-width: 575px) {
+    padding-inline: 16px !important;
+  }
 }
 
 img {
@@ -111,7 +120,7 @@ li:hover > a {
     display: flex;
     align-items: center;
     padding-bottom: 17px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     justify-content: flex-end;
   }
 
@@ -122,7 +131,7 @@ li:hover > a {
 
     a {
       display: flex;
-      color: #031749;
+      color: #166A48 !important;
       font-size: 20px;
       font-weight: 500;
       line-height: 150%;

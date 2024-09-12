@@ -7,11 +7,36 @@
   height: calc(100vh);
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 767px) {
+    align-items: center;
+    height: auto;
+    padding-top: 100px;
+  }
+
   .home-img {
     right: 0;
     position: absolute;
     top: 0;
     height: calc(100% - 106px);
+
+    @media (max-width: 1200px) {
+      right: -150px;
+    }
+
+    @media (max-width: 991px) {
+      right: -250px;
+    }
+
+    @media (max-width: 767px) {
+      position: initial;
+      max-width: 544px;
+      height: auto;
+    }
+
+    @media (max-width: 575px) {
+      width: 100%;
+    }
   }
   .container {
     flex: 1;
@@ -21,11 +46,20 @@
     .texts {
       width: 50%;
 
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+
       & > span {
         color: #5C5C5C;
         font-size: 20px;
         font-weight: 500;
         letter-spacing: 2px;
+
+        @media (max-width: 767px) {
+          font-size: 20px;
+          letter-spacing: 1.6px;
+        }
       }
 
       h1 {
@@ -34,6 +68,10 @@
         font-size: 40px;
         font-weight: 600;
         margin-block: 16px;
+
+        @media (max-width: 767px) {
+          font-size: 32px;
+        }
 
         span {
           color: #166A48;
@@ -46,6 +84,10 @@
         font-size: 20px;
         font-weight: 500;
         margin-bottom: 35px;
+
+        @media (max-width: 767px) {
+          font-size: 16px;
+        }
       }
 
       .btn {
@@ -63,12 +105,25 @@
     background: #166A48;
     justify-content: space-between;
 
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+
     div {
       width: 50%;
       display: flex;
       align-items: center;
       gap: 16px;
       justify-content: center;
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+
+      @media (max-width: 575px) {
+        padding-inline: 24px;
+        gap: 0;
+      }
 
       &:first-child {
         border-right: 1px solid white;
@@ -81,6 +136,12 @@
         line-height: 156%;
         letter-spacing: 6.4px;
         margin: 0;
+
+        @media (max-width: 767px) {
+          font-size: 32px;
+          letter-spacing: 3.2px;
+          line-height: 100%;
+        }
       }
       span {
         color: #FFF;
@@ -88,6 +149,10 @@
         font-weight: 500;
         line-height: 156%;
         letter-spacing: 1.418px;
+
+        @media (max-width: 575px) {
+          text-align: center;
+        }
       }
     }
   }
@@ -97,9 +162,30 @@
   background-color: #96BF19;
   padding-block: 76px;
 
+  @media (max-width: 767px) {
+    padding-block: 40px;
+  }
+
   img {
     width: 120%;
     height: auto;
+
+    @media (max-width: 1400px) {
+      width: 470px;
+    }
+
+    @media (max-width: 1200px) {
+      width: 410px;
+    }
+
+    @media (max-width: 991px) {
+      width: 320px;
+    }
+
+    @media (max-width: 767px) {
+      order: 2;
+      width: 100%;
+    }
   }
 
   .container {
@@ -107,7 +193,15 @@
     gap: 50px;
     align-items: center;
 
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+
     .texts {
+      @media (max-width: 767px) {
+        order: 1;
+      }
+
       h2 {
         color: #FFF;
         font-size: 40px;
@@ -115,6 +209,10 @@
         line-height: 140%;
         letter-spacing: 4px;
         margin-bottom: 12px;
+
+        @media (max-width: 991px) {
+          font-size: 32px;
+        }
       }
 
       p {
@@ -129,6 +227,12 @@
       .btn {
         border-color: white;
         color: white;
+
+        @media (max-width: 767px) {
+          font-size: 18px;
+          line-height: 156%;
+          letter-spacing: 1.8px;
+        }
 
         &:hover {
           color: white !important;
@@ -145,13 +249,43 @@
   position: relative;
   margin-top: 74px;
 
+  @media (max-width: 767px) {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
   .bg {
     position: absolute;
     bottom: 0;
     left: 0;
+
+    @media (max-width: 1400px) {
+      width: 700px;
+      height: auto;
+      bottom: 40px;
+    }
+
+    @media (max-width: 1200px) {
+      width: 550px;
+    }
+
+    @media (max-width: 991px) {
+      width: 400px;
+      bottom: 200px;
+    }
+
+    @media (max-width: 767px) {
+      position: initial;
+      width: 105%;
+    }
   }
   .container {
     display: flex;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      gap: 32px;
+    }
 
     .texts {
       flex: 1 1 auto;
@@ -179,6 +313,12 @@
         line-height: 156%;
         letter-spacing: 1.6px;
         margin-bottom: 24px;
+
+        @media (max-width: 991px) {
+          br {
+            display: none;
+          }
+        }
       }
     }
 
@@ -188,6 +328,14 @@
       gap: 34px;
       margin-bottom: 200px;
 
+      @media (max-width: 1200px) {
+        margin-bottom: 140px;
+      }
+
+      @media (max-width: 767px) {
+        margin-bottom: 40px;
+      }
+
       .card {
         width: 339px;
         border-radius: 2.955px;
@@ -196,6 +344,15 @@
         display: flex;
         align-items: flex-start;
         padding: 24px 16px;
+
+        @media (max-width: 991px) {
+          width: 320px;
+        }
+
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+
         img {
           margin-bottom: 16px;
         }
@@ -206,6 +363,11 @@
           line-height: 156%;
           letter-spacing: 2px;
           margin-bottom: 10px;
+
+          @media (max-width: 767px) {
+            font-size: 18px;
+            letter-spacing: 1.8px;
+          }
         }
         p {
           color: #FFF;
@@ -228,10 +390,48 @@
     gap: 21px;
     align-items: center;
 
+    @media (max-width: 1400px) {
+      .main-image {
+        width: 410px;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      .main-image {
+        width: 330px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+      .main-image {
+        width: 410px;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .main-image {
+        order: 2;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .main-image {
+        width: 100%;
+      }
+    }
+
     .content {
       display: flex;
       flex-direction: column;
       flex: 1 1 auto;
+
+      @media (max-width: 767px) {
+        order: 1;
+      }
+
       h2 {
         color: #4B4B4B;
         font-family: "Inter", sans-serif;
@@ -240,6 +440,11 @@
         line-height: 140%;
         letter-spacing: 4px;
         margin-bottom: 30px;
+
+        @media (max-width: 767px) {
+          font-size: 32px;
+          letter-spacing: 3.2px;
+        }
       }
       .buttons {
         display: grid;
@@ -247,6 +452,15 @@
         column-gap: 48px;
         row-gap: 24px;
         margin-bottom: 30px;
+
+        @media (max-width: 1400px) {
+          column-gap: 32px;
+        }
+
+        @media (max-width: 767px) {
+          display: flex;
+          flex-direction: column;
+        }
 
         .btn {
           padding: 4px 8px;
@@ -258,6 +472,11 @@
           font-weight: 500;
           line-height: 156%;
           letter-spacing: 1.8px;
+
+          @media (max-width: 1400px) {
+            font-size: 16px;
+            gap: 10px;
+          }
         }
       }
     }
@@ -269,12 +488,52 @@
   padding-block: 112px;
   background: #166A48;
 
+  @media (max-width: 767px) {
+    padding-block: 27px 40px;
+  }
+
   .container {
     display: flex;
-    padding-inline: 200px !important;
+    padding-inline: 160px !important;
+    flex-direction: column;
+
+    @media (max-width: 1400px) {
+      padding-inline: 40px !important;
+    }
+
+    @media (max-width: 991px) {
+      padding-inline: 0 !important;
+    }
+
+    @media (max-width: 767px) {
+      .video {
+        order: 2;
+      }
+    }
+
+    @media (max-width: 575px) {
+      padding-inline: 20px !important;
+    }
+
     .texts {
-      padding: 74px 54px;
+      padding: 54px;
       border: 2px solid #FEFFFF;
+
+      @media (max-width: 767px) {
+        order: 1;
+        margin-bottom: 40px;
+        padding: 26px;
+      }
+
+      @media (max-width: 575px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        strong {
+          display: block;
+        }
+      }
+
       h2 {
         color: #FFF;
         font-family: "Inter", sans-serif;
@@ -290,6 +549,9 @@
         line-height: 156%;
         letter-spacing: 1.6px;
         margin-bottom: 16px;
+        @media (max-width: 575px) {
+          text-align: center;
+        }
       }
       .btn {
         color: #FFF;
@@ -309,6 +571,23 @@
   padding-block: 36px 60px;
   .container {
     padding-inline: 100px !important;
+
+    @media (max-width: 1600px) {
+      padding-inline: 40px !important;
+    }
+
+    @media (max-width: 1400px) {
+      padding-inline: 0 !important;
+    }
+
+    @media (max-width: 991px) {
+      padding-inline: 100px !important;
+    }
+
+    @media (max-width: 575px) {
+      padding-inline: 20px !important;
+    }
+
     h2 {
       color: #4B4B4B;
       font-family: "Inter", sans-serif;
@@ -317,15 +596,47 @@
       line-height: 140%;
       letter-spacing: 4px;
       margin-bottom: 50px;
+
+      @media (max-width: 575px) {
+        margin-bottom: 20px;
+      }
     }
     .posts {
       display: flex;
       gap: 16px;
       justify-content: space-between;
       margin-bottom: 45px;
+
+      @media (max-width: 991px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
       .post {
         display: flex;
         flex-direction: column;
+        width: 363px;
+
+        @media (max-width: 1600px) {
+          width: 355px;
+        }
+
+        @media (max-width: 1400px) {
+          width: 300px;
+        }
+
+        @media (max-width: 1200px) {
+          width: 275px;
+        }
+
+        @media (max-width: 991px) {
+          width: 363px;
+        }
+
+        @media (max-width: 575px) {
+          width: 100%;
+        }
+
         p {
           display: inline;
           color: #4B4B4B;
@@ -334,6 +645,10 @@
           line-height: 156%;
           letter-spacing: 1.8px;
           margin-block: 20px 8px;
+
+          @media (max-width: 1200px) {
+            font-size: 16px;
+          }
         }
       }
     }

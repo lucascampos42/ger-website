@@ -106,6 +106,13 @@ a {
   margin-left: 0 !important;
 }
 
+@media (max-width: 575px) {
+  .container {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+}
+
 @media (min-width: 576px) {
   .container, .right-container, .left-container {
     max-width: 544px;
