@@ -20,12 +20,8 @@
     top: 0;
     height: calc(100% - 106px);
 
-    @media (max-width: 1200px) {
-      right: -150px;
-    }
-
     @media (max-width: 991px) {
-      right: -250px;
+      right: -150px;
     }
 
     @media (max-width: 767px) {

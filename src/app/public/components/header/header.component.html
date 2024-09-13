@@ -1,11 +1,11 @@
 <nav class="d-flex container justify-content-between align-items-center position-relative">
   <img src="assets/logo.png" alt="logo" class="img-fluid" />
   <ul class="d-flex nav-list">
-    <li><a>Início</a></li>
-    <li><a>Sobre nós</a></li>
-    <li><a>Serviços</a></li>
-    <li><a>Filias</a></li>
-    <li><a>Nossa História</a></li>
+    <li><a (click)="scrollToElement('hero')">Início</a></li>
+    <li><a (click)="scrollToElement('what-we-do')">Sobre nós</a></li>
+    <li><a (click)="scrollToElement('services')">Serviços</a></li>
+    <li><a (click)="scrollToElement('branches')">Filias</a></li>
+    <li><a (click)="scrollToElement('our-story')">Nossa História</a></li>
     <li><a>Blog</a></li>
   </ul>
   <div class="mobile-options">
@@ -36,11 +36,11 @@
       </div>
       <div class="nav-list-mobile-wrapper">
         <ul class="d-flex flex-column nav-list-mobile-body">
-          <li><a>Início</a></li>
-          <li><a>Sobre nós</a></li>
-          <li><a>Serviços</a></li>
-          <li><a>Filias</a></li>
-          <li><a>Nossa História</a></li>
+          <li><a (click)="scrollToElement('hero')">Início</a></li>
+          <li><a (click)="scrollToElement('what-we-do')">Sobre nós</a></li>
+          <li><a (click)="scrollToElement('services')">Serviços</a></li>
+          <li><a (click)="scrollToElement('branches')">Filias</a></li>
+          <li><a (click)="scrollToElement('our-story')">Nossa História</a></li>
           <li><a>Blog</a></li>
         </ul>
       </div>
