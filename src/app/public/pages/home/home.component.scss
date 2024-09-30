@@ -243,7 +243,7 @@
 #services {
   display: flex;
   position: relative;
-  margin-top: 74px;
+  padding-top: 80px;
 
   @media (max-width: 767px) {
     flex-direction: column;
@@ -380,7 +380,7 @@
 }
 
 #branches {
-  padding-block: 0 40px;
+  padding-block: 80px 40px;
   .container {
     display: flex;
     gap: 21px;
