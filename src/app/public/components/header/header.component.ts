@@ -37,7 +37,8 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  scrollToElement(id: string) {
+  async scrollToElement(id: string) {
+    await this.router.navigate(["/"])
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });

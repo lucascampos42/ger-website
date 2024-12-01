@@ -7,4 +7,18 @@ export const publicRoutes: Routes = [
     pathMatch: 'full',
     data: { title: 'G&R - Home' }
   },
+  {
+    path: 'blog',
+    data: { title: 'G&R - Blog' },
+    children: [
+      {
+        path: '',
+        loadComponent: () => import('./pages/blog/blog.component').then( m => m.BlogComponent),
+      },
+      {
+        path: 'post/:id',
+        loadComponent: () => import('./pages/blog/post/post.component').then( m => m.PostComponent),
+      }
+    ]
+  },
 ];

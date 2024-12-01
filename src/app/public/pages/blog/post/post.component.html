@@ -1,0 +1,12 @@
+<section id="post">
+  <div class="container">
+    <h1 class="post-title">{{postTitle()}}</h1>
+    <div class="post-content" [innerHTML]="postContent()"></div>
+  </div>
+</section>
+
+<app-section-blog
+  (clickPost)="refreshPost()"
+  title="Mais publicações"
+  [omitPostId]="postId()"
+></app-section-blog>

@@ -1,15 +1,17 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import {SectionBlogComponent} from "./components/section-blog/section-blog.component";
+
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    RouterLink
+    RouterLink,
+    SectionBlogComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnInit {
-  protected router = inject(Router);
-  ngOnInit(): void {}
+export class HomeComponent {
+
 }

@@ -2,12 +2,12 @@
   <div class="lists">
     <img src="assets/logo.png" alt="">
     <ul class="nav-list">
-      <li>Inicio</li>
-      <li>Sobre nós</li>
-      <li>Serviços</li>
-      <li>Filias</li>
-      <li>Nossa História</li>
-      <li>Blog</li>
+      <li><a (click)="scrollToElement('hero')">Início</a></li>
+      <li><a (click)="scrollToElement('what-we-do')">Sobre nós</a></li>
+      <li><a (click)="scrollToElement('services')">Serviços</a></li>
+      <li><a (click)="scrollToElement('branches')">Filias</a></li>
+      <li><a (click)="scrollToElement('our-story')">Nossa História</a></li>
+      <li routerLink="/blog"><a>Blog</a></li>
     </ul>
     <ul class="contacts">
       <li>
