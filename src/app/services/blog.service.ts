@@ -10,8 +10,7 @@ export const IMAGE_PLACEHOLDER = 'assets/post-2.png';
 })
 export class BlogService {
   private http = inject(HttpClient)
-  /*private apiUrl = 'https://gersolucoes.com/wp-json/wp/v2/posts';*/
-  private apiUrl = 'https://codesdevs.com.br/wordpress/wp-json/wp/v2';
+  private apiUrl = 'https://gersolucoes.com/wordpress/wp-json/wp/v2';
 
   getPosts(params?: BlogPostParams) {
     const httpParams = new HttpParams({ fromObject: {
