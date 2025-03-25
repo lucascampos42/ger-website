@@ -40,7 +40,7 @@
     flex-direction: column;
     justify-content: center;
     .texts {
-      width: 50%;
+      width: 60%;
 
       @media (max-width: 767px) {
         width: 100%;
@@ -163,7 +163,7 @@
   }
 
   img {
-    width: 120%;
+    width: 100%;
     height: auto;
 
     @media (max-width: 1400px) {
@@ -226,7 +226,7 @@
 
         @media (max-width: 767px) {
           font-size: 18px;
-          line-height: 156%;
+          line-height: 150%;
           letter-spacing: 1.8px;
         }
 
@@ -243,16 +243,16 @@
 #services {
   display: flex;
   position: relative;
-  padding-top: 80px;
+  padding-top: 60px;
 
   @media (max-width: 767px) {
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 30px;
   }
 
   .bg {
     position: absolute;
-    bottom: 0;
+    margin-top: 340px;
     left: 0;
 
     @media (max-width: 1400px) {
