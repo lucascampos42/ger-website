@@ -1,23 +1,25 @@
-import {Component, inject, OnInit, signal} from '@angular/core';
-import {ActivatedRoute, RouterLink} from "@angular/router";
+import {Component, inject, OnInit, signal, ViewEncapsulation} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 import {BlogService} from "../../../../services/blog.service";
-import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
+import {DomSanitizer, SafeHtml, Meta, Title} from "@angular/platform-browser";
 import {SectionBlogComponent} from "../../home/components/section-blog/section-blog.component";
 
 @Component({
   selector: 'app-post',
   standalone: true,
   imports: [
-    RouterLink,
     SectionBlogComponent
   ],
   templateUrl: './post.component.html',
-  styleUrl: './post.component.scss'
+  styleUrl: './post.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class PostComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private blogService = inject(BlogService);
   private sanitizer = inject(DomSanitizer);
+  private meta = inject(Meta);
+  private titleService = inject(Title);
 
   postTitle = signal('');
   postContent = signal<SafeHtml | null>(null);
@@ -35,7 +37,15 @@ export class PostComponent implements OnInit {
 
     this.blogService.getPostById(this.postId()).subscribe({
       next: (post) => {
-        this.postTitle.set(post.title.rendered.replace(/&nbsp;/g, ' '));
+        const title = post.title.rendered.replace(/&nbsp;/g, ' ');
+        this.postTitle.set(title);
+
+        // SEO Updates
+        this.titleService.setTitle(title);
+        this.meta.updateTag({ name: 'description', content: post.excerpt?.rendered?.replace(/<[^>]*>/g, '').slice(0, 160) || title });
+        this.meta.updateTag({ property: 'og:title', content: title });
+        this.meta.updateTag({ property: 'og:description', content: post.excerpt?.rendered?.replace(/<[^>]*>/g, '').slice(0, 160) || title });
+
         const sanitizedContent = post.content.rendered.replace(/&nbsp;/g, ' ');
         this.postContent.set(this.sanitizer.bypassSecurityTrustHtml(sanitizedContent));
       },
