@@ -34,6 +34,7 @@
             ],
             "styles": [
               "src/styles.scss",
+              "src/wordpress/settings.css",
               "src/wordpress/style.css",
               "src/wordpress/theme.css"
             ],
