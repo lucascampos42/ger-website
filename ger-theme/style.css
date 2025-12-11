@@ -204,3 +204,13 @@ footer .lists .socials { display: flex; gap: 20px; }
 #post { margin-block: 125px 80px; }
 .post-title { font-size: 2rem; font-weight: bold; margin-bottom: 20px; white-space: normal; overflow-wrap: break-word; word-wrap: break-word; }
 .post-content p { word-wrap: break-word; }
+
+/* Home blog section */
+#blog { padding-block: 36px 60px; }
+#blog .container { padding-inline: 100px !important; }
+@media (max-width: 1600px) { #blog .container { padding-inline: 40px !important; } }
+@media (max-width: 1400px) { #blog .container { padding-inline: 0 !important; } }
+@media (max-width: 991px) { #blog .container { padding-inline: 100px !important; } }
+@media (max-width: 575px) { #blog .container { padding-inline: 20px !important; } }
+#blog h2 { color: #4B4B4B; font-family: "Inter", sans-serif; font-size: 40px; font-weight: 600; line-height: 140%; letter-spacing: 4px; margin-bottom: 50px; }
+@media (max-width: 575px) { #blog h2 { margin-bottom: 20px; font-size: 32px; } }

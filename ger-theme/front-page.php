@@ -133,6 +133,38 @@
       </div>
     </div>
   </section>
+  <section id="blog">
+    <div class="container">
+      <h2>Mais publicações</h2>
+      <?php
+      $home_posts = new WP_Query([
+        'post_type' => 'post',
+        'posts_per_page' => 6,
+        'ignore_sticky_posts' => true,
+      ]);
+      ?>
+      <?php if ($home_posts->have_posts()) : ?>
+        <div class="posts">
+          <?php while ($home_posts->have_posts()) : $home_posts->the_post(); ?>
+            <a class="post d-block" href="<?php the_permalink(); ?>">
+              <?php
+              $thumb = get_the_post_thumbnail_url(get_the_ID(), 'medium');
+              if (!$thumb) {
+                $thumb = get_template_directory_uri() . '/assets/post-2.png';
+              }
+              ?>
+              <img src="<?php echo esc_url($thumb); ?>" alt="" />
+              <p><?php the_title(); ?></p>
+              <strong>Ler mais</strong>
+            </a>
+          <?php endwhile; ?>
+        </div>
+        <?php wp_reset_postdata(); ?>
+      <?php endif; ?>
+      <div class="d-flex justify-content-center">
+        <a class="btn btn-green" href="<?php echo esc_url(get_option('page_for_posts') ? get_permalink(get_option('page_for_posts')) : get_post_type_archive_link('post')); ?>">Ver mais</a>
+      </div>
+    </div>
+  </section>
 </main>
 <?php get_footer(); ?>
-
