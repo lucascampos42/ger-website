@@ -8,7 +8,7 @@
   <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/favicon.png" />
 </head>
 <body <?php body_class(); ?>>
-<header class="py-3">
+<header class="py-2">
   <nav class="d-flex container justify-content-between align-items-center position-relative">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/logo.png" alt="logo" class="img-fluid" />
     <ul class="d-flex nav-list">
@@ -30,8 +30,8 @@
           </g>
         </svg>
       </button>
-    </div>
-  </nav>
+</div>
+</nav>
 </header>
 <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
   <div class="offcanvas-header">
@@ -49,3 +49,16 @@
     </ul>
   </div>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var offcanvasEl = document.getElementById('mobileMenu');
+  if (!offcanvasEl) return;
+  var links = offcanvasEl.querySelectorAll('a.nav-link');
+  if (window.bootstrap && typeof window.bootstrap.Offcanvas !== 'undefined') {
+    var instance = window.bootstrap.Offcanvas.getOrCreateInstance(offcanvasEl);
+    links.forEach(function (link) { link.addEventListener('click', function () { instance.hide(); }); });
+  } else {
+    links.forEach(function (link) { link.addEventListener('click', function () { offcanvasEl.classList.remove('show'); document.body.classList.remove('offcanvas-backdrop'); }); });
+  }
+});
+</script>

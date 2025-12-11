@@ -44,12 +44,12 @@ a { text-decoration: none; }
 @media (min-width: 1600px) { .container { max-width: 1348px; } .right-container, .left-container { width: 674px; } }
 
 /* Header */
-body { padding-top: 110px; }
+body { padding-top: 90px; }
 header { position: fixed; width: 100%; top: 0; z-index: 100; }
 .mobile-options { display: none; }
-header nav .nav-list { gap: 12px; }
-header nav .nav-list > li { padding: 0.75rem; display: flex; align-items: center; }
-header nav { height: fit-content; background-color: #166A48; border-radius: 34px; padding: 16px 34px !important; margin-top: 20px; box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12); }
+header nav .nav-list { gap: 10px; margin-right: 32px; }
+header nav .nav-list > li { padding: 0.5rem; display: flex; align-items: center; }
+header nav { height: fit-content; background-color: #166A48; border-radius: 28px; padding: 10px 72px !important; margin-top: 16px; box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12); }
 @media (max-width: 575px) { header nav { padding-inline: 16px !important; } }
 header img { cursor: pointer; }
 header a { font-weight: 500; cursor: pointer; color: #FEFFFF !important; transition: color 0.4s ease-in-out; }
